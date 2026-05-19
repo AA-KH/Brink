@@ -6,13 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EA6E87A42FB76951008ACDEF /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA6E87A32FB76951008ACDEF /* Accelerate.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EA3469EA2FB68029004D64A8 /* Brink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6E07CC2FBA2085008ACDEF /* ModelRunner.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ModelRunner.xcodeproj; sourceTree = "<group>"; };
+		EA6E87A32FB76951008ACDEF /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EA6E87A62FB76984008ACDEF /* Exceptions for "Brink" folder in "Brink" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EA3469E92FB68029004D64A8 /* Brink */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EA3469EC2FB68029004D64A8 /* Brink */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EA6E87A62FB76984008ACDEF /* Exceptions for "Brink" folder in "Brink" target */,
+			);
 			path = Brink;
 			sourceTree = "<group>";
 		};
@@ -23,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA6E87A42FB76951008ACDEF /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3469EC2FB68029004D64A8 /* Brink */,
+				EA6E87A22FB76951008ACDEF /* Frameworks */,
 				EA3469EB2FB68029004D64A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +64,21 @@
 				EA3469EA2FB68029004D64A8 /* Brink.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EA6E09422FBA2085008ACDEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA6E87A22FB76951008ACDEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA6E87A32FB76951008ACDEF /* Accelerate.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +133,12 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EA3469EB2FB68029004D64A8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EA6E09422FBA2085008ACDEF /* Products */;
+					ProjectRef = EA6E07CC2FBA2085008ACDEF /* ModelRunner.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EA3469E92FB68029004D64A8 /* Brink */,
@@ -184,6 +226,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -241,6 +284,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -256,6 +300,7 @@
 				DEVELOPMENT_TEAM = TKDVGQZT6R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brink/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -264,6 +309,17 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/google/_upb",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/numpy/_core/lib",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/numpy/random/lib",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/PIL/.dylibs",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/scipy/.dylibs",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/xgboost/lib",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/sklearn/.dylibs",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/coremltools",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaradhyakhanna.Brink;
@@ -288,6 +344,7 @@
 				DEVELOPMENT_TEAM = TKDVGQZT6R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Brink/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,6 +353,17 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/google/_upb",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/numpy/_core/lib",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/numpy/random/lib",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/PIL/.dylibs",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/scipy/.dylibs",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/xgboost/lib",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/sklearn/.dylibs",
+					"$(PROJECT_DIR)/Brink/python_training/.venv/lib/python3.13/site-packages/coremltools",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aaradhyakhanna.Brink;
